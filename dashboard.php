@@ -1,4 +1,11 @@
-<?php ob_start(); session_start(); ?>
+<?php 
+  ob_start();
+  session_start();
+  if($_SESSION['valid'] == false){
+    header("location : php/login.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
